@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: microservice-config-client
+  
+  cloud:
+    config:
+#      uri: http://config-server:8040
+      profile: dev
+      label: master
+      discovery:
+        enabled: true
+        serviceId: microservice-config-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/       
